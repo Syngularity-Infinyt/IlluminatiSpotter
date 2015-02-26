@@ -8,7 +8,7 @@ def run():
     for i, image in enumerate(os.listdir('img/')):
         if '.png' in image:
             c_time = time.time()
-            os.system('java -jar build/A.jar ' + os.getcwd() + '/img/' + image + ' ' + os.getcwd() + '/' + image.replace('.png', '.out'))
+            os.system('java -jar build/A.jar ' + 'img/' + image + ' ' + image.replace('.png', '.out'))
             times_.append(time.time() - c_time)
             print 'It takes', times_[i], 'to process', os.getcwd() + '\\' + image
     total_time = sum(times_)
